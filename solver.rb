@@ -1,19 +1,21 @@
 class Solver
-    def factorial(num)
-        raise ArgumentError 'Negative numbers are not allowed' if num<0
-        return 1 if [1, 0].include?(num)
+  def factorial(num)
 
-        num * factorial(num - 1)
-      end
+    return raise ArgumentError, 'Negative numbers are not allowed' if num.negative?
+    return 1 if [1, 0].include?(num)
 
-      def reverse(string)
-        string.reverse
-      end
-    
-      def fizzbuzz(num)
-        return "FizzBuzz" if num%5==0 && num%3==0
-        return "Fizz" if num%3==0 
-        return "Buzz" if num%5==0
-        return num.to_s
-      end
+    num * factorial(num - 1)
+  end
+
+  def reverse(string)
+    string.reverse
+  end
+
+  def fizzbuzz(num)
+    return 'FizzBuzz' if (num % 5).zero? && (num % 3).zero?
+    return 'Fizz' if (num % 3).zero?
+    return 'Buzz' if (num % 5).zero?
+
+    num.to_s
+  end
 end
