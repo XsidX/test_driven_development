@@ -1,6 +1,5 @@
 class Solver
   def factorial(num)
-
     return raise ArgumentError, 'Negative numbers are not allowed' if num.negative?
     return 1 if [1, 0].include?(num)
 

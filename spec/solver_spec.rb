@@ -7,7 +7,7 @@ describe Solver do
 
   it 'should return error when given -1' do
     n = -1
-    expect { @solver.factorial(-1) }.to raise_error(ArgumentError)
+    expect { @solver.factorial(n) }.to raise_error(ArgumentError)
   end
 
   it 'should return 1 when given 0' do
